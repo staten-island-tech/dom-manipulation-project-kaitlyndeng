@@ -4,9 +4,6 @@ const DOMSelectors = {
   box: document.getElementById("box"),
   option: document.getElementByIdAll(".option"),
 };
-function backgroundAndText(box, text) {
-  box.style.backgroundColor = "green";
-  text.innerHTML = "blue";
+function learn() {
+  getElementById("box").style.backgroundColor = "lightblue";
 }
-
-backgroundAndText(DOMSelectors.box, DOMSelectors.text);
