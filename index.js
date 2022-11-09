@@ -5,5 +5,5 @@ const DOMSelectors = {
   option: document.getElementByIdAll(".option"),
 };
 function learn() {
-  getElementById("box").style.backgroundColor = "lightblue";
+  getElementById("box");
 }
