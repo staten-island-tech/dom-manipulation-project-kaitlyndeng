@@ -1,6 +1,15 @@
 const DOMSelectors = {
-  button: document.getElementById("button"),
-  text: document.getElementById("text"),
-  box: document.getElementById("box"),
+  top: document.getElementById("top"),
+  url: document.getElementById("url"),
+  bottom: document.getElementById("bottom"),
+  button: document.querySelector(".btn"),
+  memeify: document.getElementById("form"),
+  section: document.getElementById("display"),
 };
-var input1 = {};
+
+DOMSelectors.memeify.addEventListener("form", function (e) {
+  e.preventDefault();
+  console.log(e);
+});
+
+// values;
