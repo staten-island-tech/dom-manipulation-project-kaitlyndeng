@@ -1,15 +1,24 @@
 const DOMSelectors = {
-  button: document.getElementById(".btn"),
+  button: document.querySelector(".btn"),
   box: document.getElementById("box"),
   top: document.getElementById("top"),
   url: document.getElementById("url"),
   btm: document.getElementById("btm"),
   form: document.getElementById("form"),
 };
+// console.log(DOMSelectors.box);
 
-DOMSelectors.button.addEventListener("submit", function (e) {
-  e.preventDefault();
-  backgroundAndText(DOMSelectors.box, DOMSelectors.top);
+DOMSelectors.form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  let top = DOMSelectors.top.value;
+  let url = DOMSelectors.url.value;
+  let btm = DOMSelectors.btm.value;
+  DOMSelectors.box.insertAdjacentHTML("beforeend", `<p> ${top} </p>`);
+  DOMSelectors.top.value = "";
+  DOMSelectors.box.insertAdjacentHTML("beforeend", `<p> ${url} </p>`);
+  DOMSelectors.url.value = "";
+  DOMSelectors.box.insertAdjacentHTML("beforeend", `<p> ${btm} </p>`);
+  DOMSelectors.btm.value = "";
 });
 
 // const DOMSelectors = {
