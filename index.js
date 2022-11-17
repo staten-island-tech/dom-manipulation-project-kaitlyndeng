@@ -10,16 +10,20 @@ const DOMSelectors = {
 
 DOMSelectors.form.addEventListener("submit", function (event) {
   event.preventDefault();
-  let top = DOMSelectors.top.value;
-  let url = DOMSelectors.url.value;
-  let btm = DOMSelectors.btm.value;
-  DOMSelectors.box.insertAdjacentHTML("beforeend", `<p> ${top} </p>`);
-  DOMSelectors.top.value = "";
-  DOMSelectors.box.insertAdjacentHTML("beforeend", `<p> ${url} </p>`);
-  DOMSelectors.url.value = "";
-  DOMSelectors.box.insertAdjacentHTML("beforeend", `<p> ${btm} </p>`);
-  DOMSelectors.btm.value = "";
-});
+  const info = {
+  top: DOMSelectors.top.value,
+  url: DOMSelectors.url.value,
+  btm: DOMSelectors.btm.value,
+  });
+  //create object from values
+  //only use 1 insertadjcent html
+  DOMSelectors.box.insertAdjacentHTML("beforeend", `<p> ${info} </p>`);
+  DOMSelectors.info.value = "";
+//   DOMSelectors.box.insertAdjacentHTML("beforeend", `<p> ${url} </p>`);
+//   DOMSelectors.url.value = "";
+//   DOMSelectors.box.insertAdjacentHTML("beforeend", `<p> ${btm} </p>`);
+//   DOMSelectors.btm.value = "";
+// });
 
 // const DOMSelectors = {
 //   top: document.getElementById("top"),
