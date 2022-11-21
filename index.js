@@ -7,7 +7,6 @@ const DOMSelectors = {
   form: document.getElementById("form"),
 };
 // console.log(DOMSelectors.box);
-
 DOMSelectors.form.addEventListener("submit", function (event) {
   event.preventDefault();
   let top = DOMSelectors.top.value;
@@ -19,17 +18,24 @@ DOMSelectors.form.addEventListener("submit", function (event) {
 <h2 id="top-text">${top}</h2>
 <img id="img" src = "${url}">
 <h3 id="bottom-text">${btm}</h3>
-<button type = "button" class="remove" onclick="remove>Remove</button>
+<button type = "button" class="remove">Remove</button>
 </div>`
   );
+  event();
+  remove();
 });
-function clear () {
-DOMSelectors.top.value = "";
-DOMSelectors.url.value = "";
-DOMSelectors.btm.value = "";
+
+function clear() {
+  DOMSelectors.top.value = "";
+  DOMSelectors.url.value = "";
+  DOMSelectors.btm.value = "";
 }
 
 function remove() {
-  const card = document.getElementById(`card`);
-  card.remove();
+  const remove = document.querySelectorAll(".remove");
+  remove.forEach((button) => {
+    DOMSelectors.button.addEventListener("click", function (e) {
+      e.target.parentNode.remove();
+    });
+  });
 }
