@@ -1,5 +1,5 @@
 const DOMSelectors = {
-  button: document.querySelector(".btn"),
+  button: document.querySelector(".button"),
   box: document.getElementById("box"),
   top: document.getElementById("top"),
   url: document.getElementById("url"),
@@ -7,6 +7,11 @@ const DOMSelectors = {
   form: document.getElementById("form"),
 };
 // console.log(DOMSelectors.box);
+function remove(event) {
+  console.log(event.target);
+  event.target.remove();
+}
+
 DOMSelectors.form.addEventListener("submit", function (event) {
   event.preventDefault();
   let top = DOMSelectors.top.value;
@@ -18,11 +23,9 @@ DOMSelectors.form.addEventListener("submit", function (event) {
 <h2 id="top-text">${top}</h2>
 <img id="img" src = "${url}">
 <h3 id="bottom-text">${btm}</h3>
-<button type = "button" class="remove">Remove</button>
+<button type= "button" class="button">Remove</button>
 </div>`
   );
-  event();
-  remove();
 });
 
 function clear() {
@@ -32,9 +35,9 @@ function clear() {
 }
 
 function remove() {
-  const remove = document.querySelectorAll(".remove");
+  const remove = document.querySelectorAll(`.button`);
   remove.forEach((button) => {
-    DOMSelectors.button.addEventListener("click", function (e) {
+    button.addEventListener("click", function (e) {
       e.target.parentNode.remove();
     });
   });
