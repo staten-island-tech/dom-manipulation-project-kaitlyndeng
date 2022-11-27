@@ -1,28 +1,34 @@
- .body, .head {
+ body, head {
     margin: 0px;
-    padding: 0px
-}
-.form-input {
-    text-align: center;
-    margin: 10px;
-    padding: 10px;
+    padding: 0px;
+    font-family: 'Comic Neue', cursive;
+    background-color: aqua;
 }
 #main-header {
     text-align: center;
     margin: 10px;
     padding: 10px;
+    font-size: 3rem;
 }
-.btn {
+
+.form-input {
+    text-align: center;
     margin: 10px;
     padding: 10px;
+    font-size: 2rem;
+}
+
+.btn {
+    margin: 30px;
+    padding: 10px;
     border-radius: 30px;
+    font-size: 1rem;
+    background-color: red;
 }
 .card {
     text-align: center;
     margin: 50px;
     padding: 10px;
-    background-color: black;
     font-size: 2rem;
-    color: white;
+    color: black;
 }
-
